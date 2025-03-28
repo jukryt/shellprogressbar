@@ -86,6 +86,11 @@ namespace ShellProgressBar
 		/// </summary>
 		public bool DisableBottomPercentage { get; set; } = false;
 
+		/// <summary>
+		/// Whether to show the percentage number at zero MaxTick value
+		/// </summary>
+		public bool DisablePercentageAtZeroMaxTicks { get; set; } = false;
+
 		/// <summary> Set percentage decimal format. By default is {0:N2}. </summary>
 		public string PercentageFormat { get; set; } = "{0:N2}% ";
 
