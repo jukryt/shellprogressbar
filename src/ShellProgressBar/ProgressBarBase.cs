@@ -90,6 +90,9 @@ namespace ShellProgressBar
 		{
 			get
 			{
+				if (this.Options.DisablePercentageAtZeroMaxTicks && this._maxTicks == 0)
+					return 0;
+
 				var percentage = Math.Max(0, Math.Min(100, (100.0 / this._maxTicks) * this._currentTick));
 				// Gracefully handle if the percentage is NaN due to division by 0
 				if (double.IsNaN(percentage) || percentage < 0) percentage = 100;
