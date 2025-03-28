@@ -75,6 +75,11 @@ namespace ShellProgressBar
 		public bool DenseProgressBar { get; set; }
 
 		/// <summary>
+		/// Whether to show the duration time
+		/// </summary>
+		public bool ShowDuration { get; set; } = true;
+
+		/// <summary>
 		/// Whether to show the estimated time. It can be set when
 		/// <see cref="ProgressBarBase.Tick"/> is called or the property
 		/// <see cref="ProgressBarBase.EstimatedDuration"/> is set.
