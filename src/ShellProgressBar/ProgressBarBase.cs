@@ -166,11 +166,6 @@ namespace ShellProgressBar
 			if (message != null)
 				Interlocked.Exchange(ref _message, message);
 
-			if (_currentTick >= _maxTicks)
-			{
-				this.EndTime = DateTime.Now;
-				this.OnDone();
-			}
 			DisplayProgress();
 		}
 
